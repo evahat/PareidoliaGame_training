@@ -1,0 +1,21 @@
+# Training Script Usage
+
+## Overview
+This guide explains how to prepare datasets and run the training script. This training was 
+
+## Background
+A Tiny YOLOv2 model was trained for real-time pareidolic face detection within the mobile AR game prototype. To improve dataset consistency and help the model focus on clearer face-like structures, a portion of the training images was manually removed during preprocessing. Images were excluded if the pareidolic face was considered too ambiguous or weak, or if the object was captured primarily from a profile or side view rather than a frontal perspective. The kept images are listed in kept_images, therefore - if you want the same results - keep only those for the training.
+
+## Steps
+1. Download the COCO 2017 dataset.
+2. Download the FaceInThings dataset.
+3. Keep only the images listed in kept_images for FacesInThigs datasets.
+4. Run emotion_format.py to convert FaceInThings into the proper format.
+5. Run cococleanup.py to prepare the background dataset from COCO.
+6. Run training.py to train the model.
+7. Export the trained model to ONNX using exportONNX.py
+
+## Notes
+- Ensure the datasets are downloaded before running the formatting commands, and adjust your paths in the top of each script.
+- Keep only the images that are in kept_images before formatting.
+- After training, export the model into ONNX format as needed.
