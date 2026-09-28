@@ -1,7 +1,7 @@
 # Training Script Usage
 
 ## Overview
-This guide explains how to prepare datasets and run the training script. This training was 
+This guide explains how to prepare datasets and run the training script.
 
 ## Background
 A Tiny YOLOv2 model was trained for real-time pareidolic face detection within the mobile AR game prototype. To improve dataset consistency and help the model focus on clearer face-like structures, a portion of the training images was manually removed during preprocessing. Images were excluded if the pareidolic face was considered too ambiguous or weak, or if the object was captured primarily from a profile or side view rather than a frontal perspective. The kept images are listed in kept_images, therefore - if you want the same results - keep only those for the training.
